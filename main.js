@@ -5,6 +5,7 @@ leftWristX = 0;
 rightWristY = 0;
 rightWristX = 0;
 
+scoreLeftWrist = 0;
 
 function preload(){
     song = loadSound("music.mp3");
@@ -25,7 +26,7 @@ function gotPoses(results){
     if(results.length > 0){
         console.log(results);
         scoreLeftWrist = results[0].pose.keypoints[9].score;
-        confirm.log("scoreLeftWrist = " + scoreLeftWrist);
+        console.log("scoreLeftWrist = " + scoreLeftWrist);
 
         leftWristX = results[0].pose.leftWrist.x;
         leftWristY = results[0].pose.leftWrist.y;
